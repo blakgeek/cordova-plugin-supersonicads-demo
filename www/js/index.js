@@ -60,8 +60,8 @@ document.addEventListener('deviceready', function onDeviceReady() {
 	window.addEventListener("offerwallInitialized", function() {
 		log("offerwallInitialized");
 	}, false);
-	window.addEventListener("rewardedVideoRewardedReceived", function(e) {
-		log("rewardedVideoRewardedReceived", e.reward);
+	window.addEventListener("rewardedVideoRewardReceived", function(e) {
+		log("rewardedVideoRewardReceived", e.placement);
 	}, false);
 	window.addEventListener("rewardedVideoEnded", function() {
 		log("rewardedVideoEnded");
@@ -100,7 +100,7 @@ document.addEventListener('deviceready', function onDeviceReady() {
 	}, false);
 
 	offerwallBtn.addEventListener('click', function offerWall() {
-		ssAds.showOfferWall();
+		ssAds.showOfferwall();
 	}, false);
 
 	interstitialBtn.addEventListener('click', function interstitial() {
